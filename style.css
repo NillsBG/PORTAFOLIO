@@ -81,7 +81,7 @@ li a:hover::before{
 }
 
 section{
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,9 +95,64 @@ section{
     gap: 10rem;
 }
 
-.contenedor-info image{
-    width: 400px;
-    height: 400px;
+.img{
+    width: 30vw;
     border-radius: 50%;
     object-fit: cover;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.info-box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.info-box h1{
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.info-box span{
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+.boton-grupo{
+    display: flex;
+    gap: 1rem;
+}
+.btn{
+    border-radius: 3rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover{
+    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
+    color: white;
+    transform: scale(1.03);
+}
+.iconos{
+    display: flex;
+    gap: 2rem;
+}
+.iconos i{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+.iconos i:hover{
+    color: rgb(0,157,255);
+    transform: scale(1.2);
 }
