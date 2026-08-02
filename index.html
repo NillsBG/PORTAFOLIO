@@ -1,38 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio prueba</title>
+    <title>NillsBG — Portafolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
 </head>
 <body>
+
+
+
+    <div class="resplandor resplandor-azul"></div>
+    <div class="resplandor resplandor-magenta"></div>
+
     <header class="header">
-        <a href="#" class="logo"> <span>Yo pues quien mas</span> </a>
+        <a href="#inicio" class="logo">Nills<span>BG</span></a>
 
-        <ul class="links">
-            <li>
-                <a href="#cosa1">si</a>
-            </li>
-            <li>
-                <a href="#Cosa2">si</a>
-            </li>
-            <li>
-                <a href="#Cosa3">si</a>
-            </li>
-            <li>
-                <a href="#Cosa2">no</a>
-            </li>
-
-
+        <ul class="enlaces-nav" id="enlaces-nav">
+            <li><a href="#info">Info</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
-        
-        <i class="fa-solid fa-bars" id="menu-icono"></i>
 
-        <button class="boton-visita">Visita mi github</button>
+        <a href="https://github.com/NillsBG" target="_blank" rel="noopener" class="boton-github">
+            <i class="fa-brands fa-github"></i>
+            <span>Visita mi GitHub</span>
+        </a>
+
+        <i class="fa-solid fa-bars" id="icono-menu"></i>
     </header>
-    <script src="scripts"></script>
+
+
+    <section class="portada" id="inicio">
+        <div class="contenedor-portada">
+
+            <div class="portada-texto">
+                <span class="etiqueta-mono">&lt;hola, soy /&gt;</span>
+                <h1>Nills Berducido</h1>
+                <p class="rol">Estudiante de <span class="texto-degradado">Ingeniería en Sistemas</span></p>
+                <p class="portada-descripcion">
+                    Hola, soy Nills Berducido, un estudiante de Ingeniería en Sistemas con interés en el desarrollo web.
+                </p>
+
+                <div class="grupo-botones">
+                    <a href="#" class="boton boton-primario" download>
+                        <i class="fa-solid fa-download"></i> Descargar CV
+                    </a>
+                    <a href="#contacto" class="boton boton-secundario">
+                        Contáctame <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="iconos">
+                    <a href="#" title="HTML5"><i class="fa-brands fa-html5"></i></a>
+                    <a href="#" title="CSS3"><i class="fa-brands fa-css3-alt"></i></a>
+                    <a href="#" title="JavaScript"><i class="fa-brands fa-square-js"></i></a>
+                    <a href="#" title="React"><i class="fa-brands fa-react"></i></a>
+                    <a href="#" title="Git"><i class="fa-brands fa-git-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portada-visual">
+                <div class="marco-cristal">
+                    
+                    <i class="fa-solid fa-terminal"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="acerca" id="info">
+        <div class="contenedor">
+            <span class="etiqueta-seccion">&lt;Info /&gt;</span>
+            <h2>Acerca de mí</h2>
+
+            <div class="acerca-grid">
+                <div class="tarjeta-cristal acerca-texto">
+                    <p>
+                        Soy estudiante de Ingeniería en Sistemas de la universidad Mariano Gálvez, y me apasiona el desarrollo web.
+                    </p>
+                    <p>
+                        Actualmente sigo aprendiendo y construyendo proyectos para reforzar
+                        mis bases en HTML, CSS y JavaScript, dando mis primeros pasos hacia
+                        frameworks como React.
+                    </p>
+                </div>
+
+                <div class="cuadricula-estadisticas">
+                    <div class="tarjeta-cristal estadistica">
+                        <span class="estadistica-titulo">HTML/CSS</span>
+                        <span class="estadistica-etiqueta">Base sólida</span>
+                    </div>
+                    <div class="tarjeta-cristal estadistica">
+                        <span class="estadistica-titulo">JavaScript</span>
+                        <span class="estadistica-etiqueta">Lógica &amp; DOM</span>
+                    </div>
+                    <div class="tarjeta-cristal estadistica">
+                        <span class="estadistica-titulo">Git &amp; GitHub</span>
+                        <span class="estadistica-etiqueta">Control de versiones</span>
+                    </div>
+                    <div class="tarjeta-cristal estadistica">
+                        <span class="estadistica-titulo">Diseño UI</span>
+                        <span class="estadistica-etiqueta">Minimalista</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="proyectos" id="proyectos">
+        <div class="contenedor">
+            <span class="etiqueta-seccion">&lt;Proyectos /&gt;</span>
+            <h2>Proyectos</h2>
+            <p class="seccion-descripcion">Algunos de mis trabajos recientes. El código completo está en mi GitHub.</p>
+
+            <div class="cuadricula-proyectos">
+
+                <a href="https://github.com/NillsBG/Final" target="_blank" rel="noopener" class="tarjeta-cristal tarjeta-proyecto">
+                    <div class="proyecto-icono"><img src="./Imagen/Proyecto1.png" alt="pro1"></div>
+                    <h3>Proyecto Uno</h3>
+                    <p>Asingnacion de cursos e informacion</p>
+                    <div class="proyecto-etiquetas">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                    <span class="proyecto-enlace">Ver repositorio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
+
+                <a href="https://github.com/NillsBG/proyecto-dos" target="_blank" rel="noopener" class="tarjeta-cristal tarjeta-proyecto">
+                    <div class="proyecto-icono"><img src="./Imagen/Proyecto2.png" alt="pro2"></div>
+                    <h3>Proyecto Dos</h3>
+                    <p>Venta y gestion de prendas deportivas.</p>
+                    <div class="proyecto-etiquetas">
+                        <span>HTML</span><span>CSS</span><span>MySQL</span>
+                    </div>
+                    <span class="proyecto-enlace">Ver repositorio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
+
+                <a href="https://github.com/NillsBG/proyecto-tres" target="_blank" rel="noopener" class="tarjeta-cristal tarjeta-proyecto">
+                    <div class="proyecto-icono"><i class="fa-solid fa-window-restore"></i></div>
+                    <h3>Proyecto Tres</h3>
+                    <p>Aca no se que poner aun.</p>
+                    <div class="proyecto-etiquetas">
+                        <span>JavaScript</span><span>CSS</span>
+                    </div>
+                    <span class="proyecto-enlace">Ver repositorio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contacto" id="contacto">
+        <div class="contenedor">
+            <span class="etiqueta-seccion">&lt;Contacto /&gt;</span>
+            <h2>Hablemos</h2>
+
+            <div class="tarjeta-cristal tarjeta-contacto">
+                <p class="contacto-intro">
+                    ¿Tienes un proyecto en mente o una oportunidad? Escríbeme, con gusto conversamos.
+                </p>
+                <div class="contacto-enlaces">
+                    <a href="mailto:nillsberducido@gmail.com" class="boton boton-primario">
+                        <i class="fa-solid fa-envelope"></i> Escríbeme
+                    </a>
+                    <a href="https://github.com/NillsBG" target="_blank" rel="noopener" class="boton boton-secundario">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/nills-berducido-2029a7278/" target="_blank" rel="noopener" class="boton boton-secundario">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <p>&copy; <span id="anio"></span> NillsBG —  <i class="fa-solid fa-laptop-code"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
