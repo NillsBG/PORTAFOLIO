@@ -1,158 +1,355 @@
-*{
+/* ===== ESTILOS BÁSICOS ===== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-size: 18px;
+    color: #333;
+}
+
+/* ===== MENÚ ===== */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 100;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu-links {
+    display: flex;
+    gap: 25px;
     list-style: none;
 }
 
-header{
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+.menu-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    color: #00aaff;
+}
+
+/* Botón GitHub */
+.btn-github {
+    background: linear-gradient(to right, #00aaff, #ff00ff);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-github:hover {
+    transform: scale(1.05);
+}
+
+/* Ícono menú (solo se ve en celular) */
+#menu-icono {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
-    background-color: rgba(0, 0, 0, 0.808);
-    backdrop-filter: blur(8px);
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 3rem;
-    z-index: 1000;
+    padding: 80px 20px;
 }
-.logo{
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-wrap: nowrap;
-    transition: 0.3s ease-in-out;
-}
-.logo:hover{
-    transform: scale(1.1);
-}
-.bar-links{
-    display: flex;
-    gap: 2rem;
-}
-li a{
-    position: relative;
-    color: white;
-    font-weight: 300;
-}
-li a::before{
-    position: absolute;
-    content: '';
-    width: 0%;
-    left: 0%;
-    height: 5px;
-    top: 25px;
-    border-radius: 1rem;
-    transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
-}
-li a:hover::before{
+
+.contenido {
+    max-width: 1100px;
     width: 100%;
 }
-.boton-github{
 
-    padding: 0.8rem 1.5rem;
-    border-radius: 3rem;
-    border: none;
-    font-weight: 500;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    text-wrap: nowrap;
-    transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
-}
-.boton-github:hover{
-    background: linear-gradient(to right, rgb(255,0,255),rgb(0,157,255));
-    transform: scale(1.03);
+/* ===== SECCIÓN INFO ===== */
+#info .contenido {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-#menu{
+.texto-info {
+    flex: 1;
+    text-align: center;
+}
+
+.texto-info h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.texto-info h1 {
+    font-size: 4rem;
+    margin: 5px 0;
+}
+
+.destacado {
     font-size: 2rem;
-    display: none;
+    background: linear-gradient(to right, #00aaff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-section{
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-}
-
-.info .contenedor-info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;
-}
-
-.img{
-    width: 30vw;
+#info img {
+    width: 300px;
     border-radius: 50%;
-    object-fit: cover;
 }
-.info-box{
+
+/* ===== BOTONES ===== */
+.botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-azul {
+    background: linear-gradient(to right, #00aaff, #ff00ff);
+    color: white;
+}
+
+.btn-azul:hover {
+    transform: scale(1.05);
+}
+
+.btn-blanco {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.btn-blanco:hover {
+    background: linear-gradient(to right, #00aaff, #ff00ff);
+    color: white;
+    border-color: transparent;
+}
+
+.btn-pequeño {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+}
+
+/* ===== ICONOS TECNOLOGÍAS ===== */
+.iconos-tec {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.iconos-tec a {
+    color: #333;
+    transition: 0.3s;
+}
+
+.iconos-tec a:hover {
+    color: #00aaff;
+    transform: translateY(-5px);
+}
+
+/* ===== PROYECTOS ===== */
+#proyectos h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.proyecto {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.proyecto i {
+    font-size: 3rem;
+    color: #00aaff;
+}
+
+.proyecto h3 {
+    margin: 15px 0 10px;
+}
+
+.proyecto p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* ===== CONTACTO ===== */
+#contacto h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 15px;
 }
 
-.info-box h3{
-    font-size: 1.8rem;
-    font-weight: 500;
-    opacity: 0.8;
+.formulario input,
+.formulario textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
 }
-.info-box h1{
-    font-size: 4rem;
-    font-weight: 600;
-    opacity: 0.8;
-}
-.info-box span{
-    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
-    background-clip: text;
-    color: transparent;
-    font-size: 2rem;
-}
-.boton-grupo{
-    display: flex;
-    gap: 1rem;
-}
-.btn{
-    border-radius: 3rem;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid rgb(0, 0, 0);
+
+.formulario button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
     cursor: pointer;
-    font-weight: 500;
-    text-wrap: nowrap;
-    transition: 0.2s ease-in-out;
+    border: none;
 }
-.btn:hover{
-    background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    background: #222;
     color: white;
-    transform: scale(1.03);
+    text-align: center;
+    padding: 30px;
 }
-.iconos{
+
+.social {
     display: flex;
-    gap: 2rem;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
 }
-.iconos i{
-    color: rgb(0, 0, 0);
+
+.social a {
+    color: white;
     font-size: 1.5rem;
-    transition: 0.3s ease-in-out;
 }
-.iconos i:hover{
-    color: rgb(0,157,255);
-    transform: scale(1.2);
+
+.social a:hover {
+    color: #00aaff;
+}
+
+/* ===== RESPONSIVE (para celulares) ===== */
+@media (max-width: 768px) {
+    /* Ocultar menú normal y mostrar ícono */
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .menu-links.activo {
+        display: flex;
+    }
+
+    #menu-icono {
+        display: block;
+    }
+
+    /* Ocultar texto del botón GitHub en celular */
+    .btn-github span {
+        display: none;
+    }
+
+    /* Cambiar orden en info */
+    #info .contenido {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #info img {
+        width: 200px;
+    }
+
+    .texto-info h1 {
+        font-size: 3rem;
+    }
+
+    .destacado {
+        font-size: 1.5rem;
+    }
+
+    /* Proyectos en 1 columna */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Títulos más pequeños */
+    #proyectos h2,
+    #contacto h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .texto-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .destacado {
+        font-size: 1.2rem;
+    }
 }

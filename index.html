@@ -1,71 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio prueba</title>
+    <title>Portafolio - NillsBG</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"> <span>NillsBG</span> </a>
+    
 
-        <ul class="bar-links">
-            <li>
-                <a href="#info">Info</a>
-            </li>
-            <li>
-                <a href="#proyectos">Proyectos</a>
-            </li>
-            <li>
-                <a href="#contacto">Contacto</a>
-            </li>
-            <li>
-                <a href="#Cosa2">no</a>
-            </li>
+    <header>
+        <a href="#" class="logo">NillsBG</a>
 
+
+        <ul class="menu-links">
+            <li><a href="#info">Info</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>      
         
+
         <i class="fa-solid fa-bars" id="menu-icono"></i>
 
-        <button class="boton-github">Visita mi GitHub</button>
+
+        <button class="btn-github">
+            <i class="fa-brands fa-github"></i> GitHub
+        </button>
     </header>
 
-    <section class="info" id="info">
-        <div class="contenedor-info">
-            <div class="info-box">
 
-                <div class="texto">
-                    <h3>Hola, soy</h3>
-                    <h1>NillsBG</h1>
-                    <span>Desarrollador web</span>
-                </div>
-            
+    <section id="info">
+        <div class="contenido">
+            <div class="texto-info">
+                <h3>Hola, soy</h3>
+                <h1>NillsBG</h1>
+                <p class="destacado">Desarrollador web</p>
                 
 
-                <div class="boton-grupo">
-                    <div class="btn">Descargar CV</div>
-                    <div class="btn">Contactame</div>
+                <div class="botones">
+                    <a href="#" class="btn btn-azul">Descargar CV</a>
+                    <a href="#contacto" class="btn btn-blanco">Contactame</a>
                 </div>
 
-                <div class="iconos">
+
+                <div class="iconos-tec">
                     <a href="#"><i class="fa-brands fa-html5"></i></a>
-                    <a href="#"><i class="fa-brands fa-css"></i></a>
+                    <a href="#"><i class="fa-brands fa-css3-alt"></i></a>
                     <a href="#"><i class="fa-brands fa-square-js"></i></a>
                     <a href="#"><i class="fa-brands fa-react"></i></a>
                 </div>
-
             </div>
-            <img src="https://desarrolladoresweb.org/wp-content/uploads/Desarrolladores-web.png" alt="" class="">
-               
+
+            <!-- Imagen -->
+            <img src="./Imagen/foto.jpg" alt="Desarrollador web">
         </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="proyectos">
+        <div class="contenido">
+            <h2>Mis Proyectos</h2>
             
+            <div class="proyectos-grid">
+                <!-- Proyecto 1 -->
+                <div class="proyecto">
+                    <img src="./Imagen/Proyecto1.png" alt="Proyecto 1"> 
+                    <h3>Proyecto 1</h3>
+                    <p>Asignacion de cursos</p>
+                    <a href="#" class="btn btn-azul btn-pequeño">Ver más</a>
+                </div>
+
+
+                <div class="proyecto">
+                    <img src="./Imagen/Proyecto2.png" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p>Venta de prendas deportivas</p>
+                    <a href="#" class="btn btn-azul btn-pequeño">Ver más</a>
+                </div>
+
+
+                <div class="proyecto">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Proyecto 3</h3>
+                    <p>Mi tercer proyecto</p>
+                    <a href="#" class="btn btn-azul btn-pequeño">Ver más</a>
+                </div>
+            </div>
+        </div>
     </section>
 
 
-    
-    <script src="scripts"></script>
+    <section id="contacto">
+        <div class="contenido">
+            <h2>Contacto</h2>
+            
+            <form class="formulario">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn btn-azul">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2024 NillsBG</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
